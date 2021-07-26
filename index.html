@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather-app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <form action="">
+            <input id="query" type="search" placeholder="search a city..." name="query" size="40" required>
+            <input id="search" type="submit" name="search" value="search">
+        </form>
+
+        <button id="units"><span id="celsius" class="active">°C</span> / <span id="fahrenheit">°F</span></button>
+    </nav>
+
+    <div class="infos">
+        <div class="city"></div><br>
+        <div class="description"></div><br>
+        <span class="temperature"></span><span id="unit_">°c</span><br>
+        <img src="" alt="" class="icon"><br>
+        <span>H:</span><span class="humidity"></span>     
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
