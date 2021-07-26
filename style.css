@@ -76,6 +76,11 @@ input {
   padding: 8px;
 }
 
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
 .temperature {
   font-size: 75px;
 }

@@ -17,10 +17,9 @@ units.addEventListener("click", () => {
     units.forEach((unit) => {
         unit.classList.toggle("active");
     })
-    let unit = document.querySelector(".active").textContent.toLowerCase();
-    document.querySelector("#unit_").textContent = unit;
+    let unit = document.querySelector(".active").textContent.toLowerCase(); 
     let city = document.querySelector(".city").textContent;
-    if (city) getWeather(unit, city)
+    if (city) getWeather(unit, city);
     else getWeather(unit);
 })
 
@@ -40,6 +39,7 @@ async function getWeather(unit = "°c", city = "bertoua") {
         }
     } catch (error) {
         alert(error);
+        return
     }  
 }
 
@@ -48,5 +48,8 @@ function addDataToScreen(datas) {
     document.querySelector(".city").textContent = datas.name;
     document.querySelector(".description").textContent = datas.weather[0].description;
     document.querySelector(".temperature").textContent = datas.main.temp;
-    document.querySelector(".humidity").textContent = datas.main.humidity + "%";   
+    document.querySelector(".humidity").textContent = `H: ${datas.main.humidity}%`;
+    let unit = document.querySelector(".active").textContent.toLowerCase();
+    document.querySelector("#unit_").textContent = unit;
+    return
 } 
